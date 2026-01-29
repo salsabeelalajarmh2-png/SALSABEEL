@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برامج التمارين</title>
+
+  <!--  تكبير الصفحة مع تصحيح body -->
+  <script>
+    function setZoom(level) {
+      document.body.style.zoom = level;
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #c1b000; /* ✅ تحسين التباين */
+      color: black;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      background-color: #d2c783;
+      padding: 1rem 0;
+    }
+
+    nav .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav button {
+      background-color: #aaa783;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      padding: 1.5rem;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    section:hover {
+      background-color: #e9f9ec;
+    }
+
+    h2 {
+      color: #d4bc00;
+    }
+
+    a.learn-more {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #a2b644;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    a.learn-more:hover {
+      background-color: #91a53d;
+    }
+  </style>
+</head>
+
+<body role="document">
+
+  <header>
+    <h1>برامج التمارين الصحية</h1>
+  </header>
+
+  <!--  أزرار تكبير بحالة محسّنة -->
+  <div style="text-align:center; margin: 1rem;">
+    <button onclick="setZoom('200%')">تكبير 200%</button>
+    <button onclick="setZoom('150%')">تكبير 150%</button>
+    <button onclick="setZoom('100%')">افتراضي 100%</button>
+  </div>
+
+  <!--  التنقل بين الصفحات مع aria-current -->
+  <nav role="navigation" aria-label="القائمة الرئيسية">
+    <div class="buttons">
+      <a href="9.html"><button>رئيسية</button></a>
+      <a href="تسجيل دخول بسيط.html"><button>تسجيل دخول</button></a>
+      <a href="تواصل مع المدربين.html"><button>تواصل مع المدربين</button></a>
+      <a href="قصص محفزه.html"><button>قصص محفزة</button></a>
+      <a href="نظام غذائي.html"><button>1 نظام غذائي</button></a>
+      <a href="نظام غذائي 2.html"><button>2 نظام غذائي</button></a>
+      <a href="نظام3.html"><button>3 نظام غذائي</button></a>
+      <a href="نصائح وأهداف عامه.html"><button>نصائح وأهداف عامة</button></a>
+      <a href="برامج تمارين.html" aria-current="page"><button>برامج تمارين</button></a> <!--  تعريف الصفحة الحالية -->
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <h2>أنواع التمارين</h2> <!--  تحسين التسلسل المنطقي للعناوين -->
+
+    <section id="strength" aria-label="تمارين القوة">
+      <h3>تمارين القوة </h3>
+      <p>برامج مخصصة لبناء العضلات وزيادة القوة. تشمل رفع الأوزان، تمارين المقاومة، وتمارين البطن والظهر.</p>
+      <a class="learn-more" href="https://mawdoo3.com/تمارين_القوة" target="_blank" aria-label="انقر لقراءة المزيد عن تمارين القوة في موقع موضوع" lang="ar">انقر للمزيد</a>
+    </section>
+
+    <section id="flexibility" aria-label="تمارين المرونة">
+      <h3>تمارين المرونة </h3>
+      <p>تحسين المرونة يساعد على تقليل الإصابات وزيادة نطاق الحركة. تشمل اليوغا، تمديدات الجسم، والبيلاتس.</p>
+      <a class="learn-more" href="https://blog.elcoach.me/articles/تمارين-مرونة-الجسم-في-المنزل" target="_blank" aria-label="انقر لقراءة المزيد عن تمارين المرونة" lang="ar">انقر للمزيد</a>
+    </section>
+
+    <section id="cardio" aria-label="تمارين الكارديو">
+      <h3>تمارين الكارديو </h3>
+      <p>تمارين لتحسين صحة القلب وحرق الدهون. مثل الجري، الدراجة الثابتة، القفز بالحبل والزومبا.</p>
+      <a class="learn-more" href="https://mawdoo3.com/ما_هي_تمارين_الكارديو" target="_blank" aria-label="انقر لقراءة المزيد عن تمارين الكارديو" lang="ar">انقر للمزيد</a>
+    </section>
+
+  </main>
+
+</body>
+</html>
